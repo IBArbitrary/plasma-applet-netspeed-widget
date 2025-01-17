@@ -132,13 +132,13 @@ Item {
 
     TextMetrics {
         id: iconTextMetrics
-        text: '↓'
+        text: 'RX'
         font.pixelSize: 64
     }
 
     TextMetrics {
         id: doubleIconTextMetrics
-        text: '↓↑'
+        text: 'RXTX'
         font.pixelSize: 64
     }
 
@@ -192,7 +192,7 @@ Item {
         font.pixelSize: height * fontHeightRatio * fontSizeScale
         renderType: Text.NativeRendering
 
-        text: showSeparately ? (swapDownUp ? '↑' : '↓') : '↓↑'
+        text: showSeparately ? (swapDownUp ? 'TX' : 'RX') : 'RXTX'
         color: Kirigami.Theme.textColor
         visible: showIcons
     }
@@ -246,7 +246,7 @@ Item {
         font.pixelSize: height * fontHeightRatio * fontSizeScale
         renderType: Text.NativeRendering
 
-        text: swapDownUp ? '↓' : '↑'
+        text: swapDownUp ? 'RX' : 'TX'
         color: Kirigami.Theme.textColor
         visible: showSeparately && showIcons
     }
